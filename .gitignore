@@ -24,3 +24,7 @@ hs_err_pid*
 
 # vscode related
 .vscode/
+.classpath
+.project
+.settings/
+target/

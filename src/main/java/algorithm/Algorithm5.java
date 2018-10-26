@@ -1,3 +1,4 @@
+package algorithm;
 
 public class Algorithm5 {
     private static String result = "";

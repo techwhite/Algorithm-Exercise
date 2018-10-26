@@ -1,13 +1,11 @@
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+package algorithm;
 
 public class Algorithm2 {
     public static void main(String[] args) {
         char[] str = "i am chinese!".toCharArray();
 
         reverse(str);
+        System.out.println(str);
     }
 
     public static void reverse(char[] str) {

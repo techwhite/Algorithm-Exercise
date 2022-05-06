@@ -1,0 +1,98 @@
+1. 交叉验证（用于模型选择，而非训练）、手动验证、自动验证  https://machinelearningmastery.com/evaluate-performance-deep-learning-models-keras/
+3. 注意测试集和训练集的分布情况，影响模型精准性
+4. 网络参数个数不能大于样本个数
+5. 确定单一的评估算法指标（准确率/召回率/准召率/时间效率等）
+6. 归一化（统一量纲、便于梯度计算、加快收敛等）
+7. 
+
+
+1. scale out
+2. 拦截
+3. 低端流量
+
+凡事有交代，件件有着落，事事有回音
+
+hdfs://zjyprc-hadoop/user/s_business/work/zhangnan9/oneoff/esmm
+代码放到这下面了
+执行脚本run.sh
+
+1. CPD复用到CPC
+2. 重定向
+3. LSTM
+4. 捕鱼休闲OCPA
+5. 洗大R
+6. 瓦力消耗控制
+7. 拦截窗口去除
+8. 包dsp
+9. 游戏库信息维护
+10. 无版号游戏回传数据
+11. 全量数据Olap&变现效率对比
+12. 支付调起数据加入人群包生成策略
+13. 素材文案库分析提升CTR、辅助素材制作，包括视频。优化工具，需要什么？比如创意制作工具
+14. 预算和价格修改实时监控
+15. 实时特征加入到模型中
+16. 新用户
+17. 统一离线归因数据 
+
+李逵劈鱼 com.dcloud.INCTSZQWSNU
+
+张钊辕 35924
+杨元 20090
+赵健 29985
+高宇轩 35198
+魏华超 29110
+
+
+联运游戏：ocpd对接风控，支持算法
+捕鱼类：包dsp，优化投放
+竞品付费包：增加特征，优化负样本，支付调起数据
+游戏库信息：批量打包及优化
+找流量：视频媒体复用，米盟媒体复用，瓦利抢量
+优化及维护：搜索场景优化，排查CTR偏低问题。归因平台，离线任务
+
+
+工作陈述（预期、阻碍依赖、相互了解）
+业务方向（新预算：休闲类/官包/H5预算，CPS，联运：批量优化+算法深度优化）
+自由时间：技术氛围（技术分享、学习时间等）+ 活动氛围（乒乓等）
+
+游戏打法
+联运部分：ocps化（技术层）、付费包方案自动化、联运转品牌
+非联运部分：包dsp引入预算、ocps化、cdn存包、广告SDK
+CPS：自建分发页导流存量游戏（剩余库存、米盟、非MIUI等）+ H5预算：自动登陆（非MIUI流量等）
+
+品牌/拦截量
+msa自动下载
+米盟便宜，卡流之外的钱？
+
+select placement_type,  c.id as campaign_id, ac.id as ad_id, bg.app_id, dc.tag from bid_ad_campaign c, bid_ad_creative ac, bid_ad_group bg, directional_conf dc where customer_id in (24822,119401,82992,159272,77012,82942,100362,37132,173732,99572,82352,29392,81342,140432,180502,154151,78112,146222,143942,178902,103312,83242,178452,161162,12402,172932,108352,154932,62932,79212,88082,168212,169102,181742,85562,64552,175992,178002,98832,178542,27832,177592,153122,157102,146201,77221,39202,139292,69392,96052,72582,26642,169992,81512,53472,20352,167052,125582,82282,170202,37532,172182,160812,22622,176602,42562,22612,160972,90202,179362,157162,172372,178792,152761,84892,153902,94862,152392,170882,46912,88742,173232) and c.status in (1,4) and  ac.status=1 and bg.status=1 and c.id=bg.ad_campaign_id and bg.id=ac.ad_group_id and dc.id=directional_conf_id and dc.tag is not null;
+
+http://tj2-miui-ad-stage03.kscn:9090/#gameAttribution/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADSEQC2ZyOFBAglBHAPQDKAFnNgDm/CFRAAzCAjRkATlHwBtUGgCeAB2Y16Y2WXH4QAfSMYd1M2QBKAwWQV5lIKEVlpDAJgAM3gLReAFn8AdgAVAEYANjwvLxivADpYrwAtMTJsABNPHy9/IK8ADgjo2Pik2LSAXwBdKsoVDS0XWQghXX1DAGM4WnU4CEFsAEls6jgujBxDNrEwRBh7JRBw2NWAyI8PMVWvdcjwgE4QGupsTHc8cUQoMlrqKHUkNAcnNU1DFrbBMUy6DPY0wIcEyozEUEwbnwoE0rUw2QIYneWnocFgel+ED0kywuAImXsXQyf3a1D0BgIwwAcgBhADyAFkAKIgeogJC0CCXACsXnuzjkECWjlA5LkGSJhmp9OZYnEkNo6GhhCahgJ1xg0jmCy0rPqov04uwkoIACteKoFNR5bJFZdGh98fo4Jr3NR5ghFoY9Q0QGK9MatFYmQBxYbcUJMqxyhVKvAOrTql1a90671VfV+w0Bk0gAAKLAAmkYAKrcKMx21xhNq52u7We3UZ33+iVaAvFgBiTJZ1tj9pVjpASfrqcb6czrcDhmQXS6xErduVyNrGpT4DTiObBvERtzZC66loi+rg8TdfXHq9W/56ja2DImQAIv9sIC30pTiA79gH5luJClwgNKjK9uyZB2Fk+DYJqCDULwgy8EgwiXDBCAIFUQA===
+
+http://tj2-miui-ad-stage03.kscn:9090/#gameAttribution/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADSEQC2ZyOFBAglBHAPQDKAFnNgDm/CFRAAzCAjRkATlHwBtUGgCeAB2Y16Y2WXH4QAfSMYd1M2QAKcrABMFeZSDsxZ6LLgJWAzABExKBl1fABaAEYLDS0EdDIgkABfAF1EyhVowyDZCCFdfUMyAA91ABk4VTkAJgA2MTgAYwwcQ1yxMEQYeKUQKoAWKp8xfqrwkGTqbEw0fHFEKDI0jM0stBy86j0DAjh1dQA5OHMQRuavEDbqDoQux0UQQEAYwHozQDTMwBntccnp2fnF9MJMgRsrlBPltiB6HYOAAVTLUU6eVq4K6dbpOEAAVX2AEkAPL7T4gKYzPBzBALJYAlZAtYgsGGBwheFNREES7gVF3EBFDiYWgQAB0giOZEwDXUcEJxJ+5MWExAUHUSDQd2WWmBGxcdDI2HYLR2dmxdkCmFkJNAmhymGNBDEampELIcFgejEUL0LP1LniDR1UM1W0M2P2AGFcQBZACiSWoSH5JIArAAGSn29W0zVQ+i61kgYplCrVOrUKCm80gS32Qx2wGO51uCjUd1kT3nOw+v10zYFAjBsNRmMgOMQRMp+ULHJo5xbOQ631B0MR6PUcSm2jofBqhn6OAwaTtVHVxKUmd6bDz7wsACaYlXsnX5bT27me5mKJuWiSJ/0s/PWis15GBi3CRgASrea4bngW4EO2L77u+XRHt+4i/heIAAFa8KoCgrpBj61nBu4IRyH7If8p5zloyDYbhEj4ZuVJaERr4HmRtrHhRP5nuhUCqDhEH3lBMHevBb6kUhHEoWhWiyJgoh4UJBEOixJHXJJIBflxqE8Vo4jiA0xBVIJD6MU+sE7qxiGfpxoCUX+hj6cgDQmcJTHPsR4nqTZ0m6YYzmGa5ynMZZamHlJ8rqLk2BkHYfjajmOB3JF0WxdwZYLv2y5DmQgh+vg2B7gg1C8BAwhIMIJKFQgCCJEAA=
+2423双出价，2421注册
+
+http://tj2-miui-ad-stage03.kscn:9090/#gameAttribution/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADSEQC2ZyOFBAglBHAPQDKAFnNgDm/CFRAAzCAjRkATlHwBtUGgCeAB2Y16Y2WXH4QAfSMYd1M2QAKcrABMFeZSDsxZ6LLgJWAzABExKBl1fABaAEYLDS0EdDIgkABfAF1EyhVowyDZCCFdfUM4dXUAOThzEDgAYwwcQ1yxMEQYeKUQQCV0wES5QFDbQGHLQAJ5MUB320AYm0B3WMAEuxBk6mxMNHxxRCgyNIzNLLQcvOo9AwJ6Ow4AFUzqatqvEAbqJoQWx0UQACEAJQB5AHVuAFFXowAYj8fgEZiA5gs8EsECs1oRMgRsrlBPl9iAyAAPdQAGTgqjkACYAGxiC6eeq4W7NVpOEAEgCsAAYSdRwgBOAAsBLEBPCBMZ01m80Wy1WYKg6iQaEe6y0SJ2LjoZGw7DqBCKpXKFGoUEwskhoE0OUwdkMYjUGwOZDgsD0YiOehq5IIdniVWVRwVe0MAEkSgBhd4AWR+SWoSFoEEhTLhFrlW2R9qVKudlTsPtNOr1BpARvsZqilpA9Btbm1isdl0Mrqg7uwnpRuwKBD9gZDYZAEaj+Bj6XhRfljcV9BTavRWNx+NkxMC2fwhtsJoL/a0Jdt5YdZCdY5rdYbqN9AeDobSnbo3bw9JSOtsNOcezkyvdh7boeo4j1tHQ85X1f0cBgaRGmpM1EjhB89GwZ9vBYABNMQP1kL8czjP8lkAhYqXuLQknA/RHygrQrDgowAFVfleBDP2/PBZTQgCgKwlpQLw8QCOgkAACteFUBR32olCERcf8MOA7CWL7CCny0ZAeL4iQBJ/VCXRExjwBAghcMk/DII4qBVF4qikJouiVPQtS7mYzSwO0tjdK0cRxCqYhuX44zBKLV1zMw9TxOs1j2Ic8RkCqIzkKUoSvIYnzLJwsCwXUXJsDIOw/GTVUVSUBKkpS7g5xbI923DMhBA9fBsEAhBqF4CBhCQYRIQqhAEESIA 
+2506双出价，其他是注册，1942大伟，2120是李玲
+
+http://tj2-miui-ad-stage03.kscn:9090/#gameAttribution/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADSEQC2ZyOFBAglBHAPQDKAFnNgDm/CFRAAzCAjRkATlHwBtUGgCeAB2Y16Y2WXH4QAfSMYd1M2QAKcrABMFeZSDsxZ6LLgJWAzABExKBl1fABaAEYLDS0EdDIgkABfAF1EyhVowyDZCCFdfUM4dXUAOThzEDgAYwwcQ1yxMEQYeKUQQHTTQHV/QHJNQDE0kGTqbEw0fHFEKDI0jM0stBy86j0DAno7DgAVTOpq2q8QBuomhBbHRRBuFgAxAFEjAGEbko2bgCUBoZGxian0wkyCNlcoJ8itKnYAJJ2MS7Tz1XBHZqtJwgcIABjRAFYAEwAdgAbAAOACcHxAw1GeHGCEm03+s0B82BoMMZAAHuoADJwVRybH4mE1OEEQ7gJFnEDYzFYsTYgAsaIFg3JXypPxS1Cg6iQaDOMy0QMWLjoZGw7DqBDgkOhmswskpoE0OUw0IIYjUDJA9DgsD0YnWeiFFpc8SqpvWRuWhghJXuAHkALI3JLUJC0CCU6V0j0GplG9b0M3CkDsrk8vkC232/CO2wuwzugFesg+twUagBshB/Z2UPh5lLAoEGPxpMpkBpjP4TEakCTHLI5zLOSmsPR2OJ5PUcR22joGv0rS98YwaSNJENxJ05d6bBr7wsACaRgAqtw3mId7I9w7D4Zj3Ap6jIiJxaEk176Cud5aOI4hVMQ2Kfru+54Pq/76IBZ4gS0l4QeIUH3iAyBVPBSHfihaEEABQHnqBuF/Deq4weIxFkT+B45uhJ5YWKdFuleyrqLk2BkHYfgmkWOBnIJwmidwdqUiAI6bmI5CCOG+DYKeCDULwEDCEgwiUlpCAIIkQA
+2406是注册，2505是双出价
+
+
+
+第一，找准入口出口，不要直接跳进去看，任何代码都有触发点，无论是http request，还是服务器自动启动，还是main函数，还是其他的，先从入口开始。第二，手边一支笔一张纸，除非你是Jeff，否则你不会记得那么多跳转的。一个跳转就写下来函数/方法名和参数，读完一遍，就有了一个sequence diagram雏形第三，私有方法掠过，只要记住输入输出即可，无需看具体实现
+https://www.codedump.info/post/20190324-how-to-read-code/
+
+sy
+4e3498ceda660409274196ecc195cf68
+
+jt
+537a3a73327d91e0844a551751f84760
+
+zmm
+662f72e1ab9a7ad63873f4cf42816da5
+
+ym
+01c88ea8dd56ee852c671eaee608c90e
+
+hwc
+e43f5ae6e46b6c8e43e468c0aaf87292

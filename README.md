@@ -1,6 +1,9 @@
 HashMap<String, Int> h = new HashMap<>()
+
 Queue<String> q = new LinkedList<>()
+       
 Stack<String> s = new Stack<>()
+       
 
 //创建数组的第一种方法
 int[] arr=new int[6];

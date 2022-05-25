@@ -1,8 +1,8 @@
 HashMap<String, Int> h = new HashMap<>()
 
-Queue<String> q = new LinkedList<>()
+Queue<Int> q = new LinkedList<>()
        
-Stack<String> s = new Stack<>()
+Stack<Int> s = new Stack<>()
        
 
 //创建数组的第一种方法
